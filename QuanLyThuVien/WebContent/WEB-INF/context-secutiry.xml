@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+	<http use-expressions="true">
+		<intercept-url pattern="/login.html" access="isAnonymous()" />
+		<intercept-url pattern="/quanlysach.html" access="hasRole('ROLE_BOSS')" />
+		<intercept-url pattern="/xemsach.html" access="hasRole('ROLE_BOSS')" />
+		<intercept-url pattern="/suasach.html" access="hasRole('ROLE_BOSS')" />
+		<intercept-url pattern="/xacnhansuasach.html" access="hasRole('ROLE_BOSS')" />
+		<intercept-url pattern="/sachganday.html" access="hasRole('ROLE_BOSS')" />
+		<intercept-url pattern="/themsach.html" access="hasRole('ROLE_BOSS')" />
+		<intercept-url pattern="/home.html"
+			access="hasAnyRole('ROLE_BOSS', 'ROLE_SLAVE')" />
+
+		<session-management invalid-session-url="/login.html" />
+
+		<access-denied-handler error-page="/forbidden.html" />
+
+		<form-login login-page='/login.html' login-processing-url="/j_spring_security_check.html"
+			default-target-url="/quanlysach.html" always-use-default-target="false"
+			authentication-failure-url="/loginFail.html" username-parameter="j_username"
+			password-parameter="j_password" />
+
+		<logout logout-url="/j_spring_security_logout.html"
+			logout-success-url="/" delete-cookies="JSESSIONID"
+			invalidate-session="true" />
+	</http>
+
+	<!--get username, password, role for authentication -->
+	<authentication-manager>
+		<authentication-provider>
+			<jdbc-user-service data-source-ref="dataSource"
+				users-by-username-query="select username, password, status from user where username=?"
+				authorities-by-username-query="select username, role from user 
+					where username =?" />
+		</authentication-provider>
+	</authentication-manager>
+
+	<global-method-security pre-post-annotations="enabled" />
+</beans:beans>

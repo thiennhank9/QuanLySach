@@ -1,0 +1,14 @@
+body {
+	padding-top: 140px;
+}
+.header{
+	margin-bottom: 20px;
+	background-color: #fff;
+	height: 68px;
+}
+.footer{
+	position: fixed;
+	left: 10px;
+	bottom: 10px;
+	height: 15px;
+}

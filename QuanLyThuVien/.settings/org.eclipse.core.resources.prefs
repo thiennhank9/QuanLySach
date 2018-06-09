@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//src/quanlythuvien/controller/MuonTraSachController.java=UTF-8
+encoding//src/quanlythuvien/controller/QuanLyThanhVienController.java=UTF-8
+encoding//src/quanlythuvien/controller/QuanlysachController.java=UTF-8
+encoding//src/quanlythuvien/controller/ThongTinMuonTraController.java=UTF-8
+encoding//src/quanlythuvien/dao/LoginDAO.java=UTF-8
+encoding//src/quanlythuvien/dao/QuanLyThanhVienDAO.java=UTF-8
+encoding//src/quanlythuvien/dao/QuanlysachDAO.java=UTF-8
+encoding//src/quanlythuvien/dao/ThongTinMuonTraDAO.java=UTF-8
+encoding//src/quanlythuvien/service/LoginService.java=UTF-8
+encoding//src/quanlythuvien/service/MuonTraSachService.java=UTF-8
+encoding//src/quanlythuvien/service/QuanLySachService.java=UTF-8
+encoding//src/quanlythuvien/service/QuanLyThanhVienService.java=UTF-8
+encoding//src/quanlythuvien/service/ThongTinMuonTraService.java=UTF-8

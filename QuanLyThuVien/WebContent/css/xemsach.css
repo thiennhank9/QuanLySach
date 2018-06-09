@@ -1,0 +1,15 @@
+.fist{
+	max-width: 65%;
+}
+
+.label1{
+	float: left;
+}
+.label2{
+	float: left;
+	text-align:left;
+	font-weight: normal;
+}
+.row{
+	margin-top: 5px;
+}

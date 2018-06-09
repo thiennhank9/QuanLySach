@@ -1,0 +1,32 @@
+.table{
+	font-size: 12px;
+}
+.table td {
+	padding: 5px;
+	border: 1px solid black;
+}
+.table th {
+	text-align: center;
+	padding: 5px;
+	border: 1px solid black;
+}
+.tdCenter{
+	text-align: center;
+}
+.tdTenSach{
+	padding:0 15px;
+}
+.pagelinks{
+	display: table;
+	margin: -10px auto;
+}
+.body a{
+	color: blue;
+}
+.body a:HOVER{
+	text-decoration: none;
+	color: graytext;
+}
+.body{
+	max-width: 70%;
+}
